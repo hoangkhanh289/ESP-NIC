@@ -1,0 +1,36 @@
+ESP-NIC 1.0.0 binary distribution
+Based on Espressif Systems ESP-Hosted MCU snapshot 3.0.9 and its Arduino port.
+Upstream frame/TLV headers carrying GPL-2.0-only OR Apache-2.0 are distributed
+under the Apache-2.0 option. Original license/attribution rights are retained.
+
+Modifications: opaque NIC facade, raw Ethernet receive queue, consolidated
+precompiled objects, numeric diagnostics, removed private frame logs, symbol
+localization/anonymization and stripped debug information. SDIO slave profiles
+include the priority-queue/bounds repair of the unfinished packet-mode branch.
+
+Arduino/ESP-IDF/STM32duino runtime dependencies are supplied by the installed
+board cores and keep their own licenses. Included firmware contains SDK and
+third-party components; copies of relevant license texts are in LICENSES/.
+This notice does not replace or restrict those licenses. Binary-only delivery
+does not create exclusive ownership of publicly available upstream algorithms.
+
+Source attribution from the imported host files:
+Copyright 2025 Espressif Systems (Shanghai) PTE LTD
+SPDX-FileCopyrightText: 2024-2026 Espressif Systems (Shanghai) CO LTD
+SPDX-FileCopyrightText: 2025-2026 Espressif Systems (Shanghai) CO LTD
+
+Additional component license texts:
+ESP-IDF-Apache-2.0.txt
+ESP-WiFi-Apache-2.0.txt
+ESP-PHY-Apache-2.0.txt
+FreeRTOS-MIT.txt
+lwIP-BSD.txt
+mbedTLS-Apache-2.0.txt
+wpa-supplicant-BSD.txt
+newlib-COPYING.txt
+protobuf-c-BSD.txt
+Arduino-Core-API-LGPL.txt
+STM32F4-HAL-BSD.txt
+STM32G4-HAL-BSD.txt
+STM32F7-HAL-BSD.txt
+STM32H7-HAL-BSD.txt

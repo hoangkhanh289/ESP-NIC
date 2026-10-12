@@ -1,0 +1,45 @@
+{
+  "profile": "esp32c6-sdio",
+  "idf": "5.5.5",
+  "source_version": "3.0.9",
+  "codec": "protobuf-c v1.5.2",
+  "ble": false,
+  "flash_files": {
+    "0x0": {
+      "file": "bootloader.bin",
+      "sha256": "bbb5e43bb4136c8d58f08dffeae42a4fcc58ad4bea6a5987e2fe7145bf0a82a0"
+    },
+    "0x10000": {
+      "file": "eh_cp_wifi_sta.bin",
+      "sha256": "20cc6978b11e44f5e88866646d58c66f75b236d157d85eaa8187859161c1087b"
+    },
+    "0x8000": {
+      "file": "partition-table.bin",
+      "sha256": "73e7f5c6f83081380dbc044da3da17e97b4259524d6abf772f7905ee2f54a57d"
+    },
+    "0xd000": {
+      "file": "ota_data_initial.bin",
+      "sha256": "7d2c7ac4888bfd75cd5f56e8d61f69595121183afc81556c876732fd3782c62f"
+    }
+  },
+  "command": [
+    "esptool",
+    "--chip",
+    "esp32c6",
+    "--port",
+    "COM_PORT",
+    "write-flash",
+    "0x0",
+    "bootloader.bin",
+    "0x10000",
+    "eh_cp_wifi_sta.bin",
+    "0x8000",
+    "partition-table.bin",
+    "0xd000",
+    "ota_data_initial.bin"
+  ],
+  "hardware_tested": false,
+  "source_patches": [
+    "tools/patch_firmware.py: priority queues and bounds in SDIO packet-mode"
+  ]
+}

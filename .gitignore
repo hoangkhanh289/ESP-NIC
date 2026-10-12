@@ -1,0 +1,5 @@
+dist/
+.validation/
+*.o
+*.elf
+*.map
